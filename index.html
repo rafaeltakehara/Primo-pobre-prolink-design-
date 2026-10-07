@@ -301,20 +301,30 @@ footer .credit{font-size:11px;color:#8a7c00;margin-top:12px}
 .cc.c-f{bottom:6px;border-color:var(--yellow);z-index:3}
 /* ---------- desktop (não afeta mobile) ---------- */
 @media (min-width:1024px){
-  body{background:#0d0c0a}
-  .page{max-width:none;display:grid;grid-template-columns:minmax(420px,42%) 1fr;min-height:100vh;overflow:visible}
-  .hero{position:sticky;top:0;height:100vh;align-self:start}
-  .hero video{object-position:50% 30%}
-  .cap{padding:0 48px 56px;max-width:620px}
-  .cap h1{font-size:64px}
-  .top{padding:28px 36px}
-  .panel{margin-top:0;border-radius:0;padding:48px 40px 24px;display:flex;flex-direction:column;align-items:center}
-  .panel>*{width:100%;max-width:600px}
-  .card{min-height:270px}
-  .card.wide{min-height:230px}
+  body{background:var(--yellow)}
+  .page{max-width:none}
+  .hero{height:78vh;min-height:560px}
+  .hero video{object-position:50% 28%}
+  .hero::after{background:linear-gradient(90deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.35) 40%,transparent 65%),linear-gradient(180deg,rgba(0,0,0,.35) 0%,transparent 25%,transparent 60%,rgba(0,0,0,.6) 100%)}
+  .top{padding:28px max(40px,calc((100% - 1200px)/2))}
+  .cap{left:max(40px,calc((100% - 1200px)/2));right:auto;width:560px;padding:0 0 90px}
+  .cap h1{font-size:76px}
+  .panel{margin:-48px auto 0;max-width:1280px;border-radius:40px 40px 0 0;padding:36px 40px 32px;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:auto 330px 360px auto;gap:16px;align-items:stretch}
   .panel>.grab{display:none}
-  .bs{left:calc(max(420px,42%) + (100% - max(420px,42%))/2);bottom:auto;top:50%;transform:translate(-50%,-46%) scale(.96);opacity:0;pointer-events:none;border-radius:28px;max-height:86vh;transition:transform .3s,opacity .25s}
-  .bs.on{transform:translate(-50%,-50%);opacity:1;pointer-events:auto}
+  .ph-head{grid-column:1/-1;padding:0 0 4px}
+  .ph-head span{font-size:22px}
+  .grid{display:contents}
+  .card{min-height:0}
+  .card.wide{grid-column:span 2;min-height:0}
+  .card h3{font-size:30px}
+  .c-livro .big{font-size:110px}
+  .talk2{grid-column:span 2;margin-top:0;display:flex;flex-direction:column}
+  .talk2 img{height:auto;flex:1;min-height:0}
+  .talk2::after{top:auto;bottom:150px}
+  .dock{grid-column:1/-1;margin:20px 0 0}
+  footer{max-width:1280px;margin:0 auto}
+  .bs{top:50%;bottom:auto;transform:translate(-50%,-46%) scale(.96);opacity:0;pointer-events:none;border-radius:28px;max-height:86vh;visibility:hidden;transition:transform .3s,opacity .25s,visibility 0s .3s}
+  .bs.on{transform:translate(-50%,-50%);opacity:1;pointer-events:auto;visibility:visible;transition:transform .3s,opacity .25s}
   .bs .grab{display:none}
 }
 </style>

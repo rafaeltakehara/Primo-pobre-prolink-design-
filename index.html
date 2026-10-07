@@ -160,6 +160,21 @@ footer .credit{font-size:11px;color:#8a7c00;margin-top:12px}
 .gain b{display:block;font-family:var(--cond);font-style:italic;font-weight:900;font-size:25px;line-height:.9;text-transform:uppercase}
 .gain span{display:block;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:3px}
 .bs-sub{font-size:13px;color:var(--muted);margin:-4px 0 6px}
+/* planilhas: sheet redesenhado */
+#bs-plan h4{margin-bottom:4px}
+#bs-plan .bs-sub{margin:0 0 14px}
+.dl{display:flex;align-items:center;gap:14px;padding:14px 14px 14px 12px;border-radius:20px;background:#f6f4ee;margin-top:10px;transition:transform .15s,background .15s}
+.dl:active{transform:scale(.98);background:#efece2}
+.fi{width:52px;height:56px;flex:none;display:block}
+.fi.img{width:52px;height:52px;border-radius:14px;overflow:hidden;background:#fff;border:1px solid #e6e2d6}
+.fi.img img{width:100%;height:100%;object-fit:cover;display:block}
+.dl .tx{flex:1;min-width:0}
+.dl .tx b{display:block;font-size:16px;font-weight:700;line-height:1.15}
+.dl .tx span{display:block;font-size:12.5px;color:#6b6556;line-height:1.3;margin-top:3px}
+.tag{font-style:normal;display:inline-block;margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:3px 7px;border-radius:6px;background:#dff0e4;color:#1a6b3a}
+.tag.web{background:var(--yellow);color:var(--ink)}
+.go{width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--yellow);display:grid;place-items:center;flex:none}
+.go svg{width:18px;height:18px;display:block}
 .dock{gap:6px!important}
 .dk{display:flex;flex-direction:column;align-items:center;gap:6px;width:72px}
 .dk .ic{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;overflow:hidden}
@@ -384,10 +399,10 @@ footer .credit{font-size:11px;color:#8a7c00;margin-top:12px}
 <div class="bs" id="bs-plan">
   <div class="grab"></div>
   <h4>Planilhas grátis</h4>
-  <p class="bs-sub">Toque pra baixar</p>
-  <a class="pr" href="https://www.eduardofeldberg.com.br/_files/ugd/c8f26f_8daee5b187544b1d9c810fa0af30fe8f.xlsx?dn=Planilha%20de%20Organiza%C3%A7%C3%A3o%20Financeira%20do%20Primo%20Pobre%20-%20Vers%C3%A3o%202026.xlsx"><span class="lg xl">XLS</span><span class="tx"><b>Organização Financeira</b><span>Versão 2026 · receitas, gastos e saldo do mês</span></span><span class="gain"><b>↓</b><span>Excel</span></span></a>
-  <a class="pr" href="https://www.eduardofeldberg.com.br/_files/ugd/c8f26f_c1f8fc8314884a398c84793b2b8f1de2.xlsx?dn=Planilha%20de%20Compara%C3%A7%C3%A3o%20de%20Financiamento%20e%20Aluguel%20-%20Primo%20Pobre.xlsx"><span class="lg xl">XLS</span><span class="tx"><b>Aluguel × Financiamento</b><span>Compara Price, SAC e aluguel ano a ano</span></span><span class="gain"><b>↓</b><span>Excel</span></span></a>
-  <a class="pr" href="https://conteudo.inco.vc/simuladorprimo_v2"><span class="lg"><img src="logos/inco.png" alt=""></span><span class="tx"><b>Calculadora de Aposentadoria</b><span>Juros compostos com inflação, feita com a INCO</span></span><span class="gain"><b>↓</b><span>Grátis</span></span></a>
+  <p class="bs-sub">Toque pra baixar · tudo grátis</p>
+  <a class="dl" href="https://www.eduardofeldberg.com.br/_files/ugd/c8f26f_8daee5b187544b1d9c810fa0af30fe8f.xlsx?dn=Planilha%20de%20Organiza%C3%A7%C3%A3o%20Financeira%20do%20Primo%20Pobre%20-%20Vers%C3%A3o%202026.xlsx"><svg class="fi" viewBox="0 0 46 56"><path d="M6 0h24l16 16v34a6 6 0 0 1-6 6H6a6 6 0 0 1-6-6V6a6 6 0 0 1 6-6z" fill="#1f7a45"/><path d="M30 0l16 16H36a6 6 0 0 1-6-6z" fill="#5fb47f"/><path d="M15 26l16 18M31 26L15 44" stroke="#fff" stroke-width="4" stroke-linecap="round"/></svg><span class="tx"><b>Organização Financeira</b><span>Versão 2026 · receitas, gastos e saldo do mês</span><em class="tag">Excel · .xlsx</em></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v13M6 11l6 6 6-6M5 20h14"/></svg></span></a>
+  <a class="dl" href="https://www.eduardofeldberg.com.br/_files/ugd/c8f26f_c1f8fc8314884a398c84793b2b8f1de2.xlsx?dn=Planilha%20de%20Compara%C3%A7%C3%A3o%20de%20Financiamento%20e%20Aluguel%20-%20Primo%20Pobre.xlsx"><svg class="fi" viewBox="0 0 46 56"><path d="M6 0h24l16 16v34a6 6 0 0 1-6 6H6a6 6 0 0 1-6-6V6a6 6 0 0 1 6-6z" fill="#1f7a45"/><path d="M30 0l16 16H36a6 6 0 0 1-6-6z" fill="#5fb47f"/><path d="M15 26l16 18M31 26L15 44" stroke="#fff" stroke-width="4" stroke-linecap="round"/></svg><span class="tx"><b>Aluguel × Financiamento</b><span>Compara Price, SAC e aluguel ano a ano</span><em class="tag">Excel · .xlsx</em></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v13M6 11l6 6 6-6M5 20h14"/></svg></span></a>
+  <a class="dl" href="https://conteudo.inco.vc/simuladorprimo_v2"><span class="fi img"><img src="logos/inco.png" alt=""></span><span class="tx"><b>Calculadora de Aposentadoria</b><span>Juros compostos com inflação, feita com a INCO</span><em class="tag web">Online</em></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
 </div>
 <div class="bs" id="bs-ant">
   <div class="grab"></div>

@@ -296,7 +296,8 @@ footer .credit{font-size:11px;color:#8a7c00;margin-top:12px}
 .cc .nm{display:block;text-align:center;margin-top:12px;color:#fff;font-size:11px;font-weight:700;opacity:.8}
 .cc.c-l{transform:translateX(-46px) rotate(-12deg);bottom:-4px}
 .cc.c-r{transform:translateX(46px) rotate(12deg);bottom:-4px}
-.cc.c-f{bottom:6px;border-color:var(--yellow)}
+.cc{transition:transform .6s cubic-bezier(.2,.9,.3,1.1),bottom .6s,border-color .4s;z-index:1}
+.cc.c-f{bottom:6px;border-color:var(--yellow);z-index:3}
 </style>
 </head>
 <body>
@@ -516,6 +517,11 @@ addEventListener('keydown',e=>{
   if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();n=Math.min(blocks.length,n+1);show(n)}
   if(e.key==='ArrowLeft'){e.preventDefault();n=Math.max(0,n-1);show(n)}});
 if(location.hash==='#montar')setBuild(true);
+
+// cupons: alterna o card do meio
+(function(){const cs=[...document.querySelectorAll('.ccs .cc')];if(cs.length<3||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const nx={'c-l':'c-f','c-f':'c-r','c-r':'c-l'};
+setInterval(()=>cs.forEach(c=>{const p=Object.keys(nx).find(x=>c.classList.contains(x));c.classList.replace(p,nx[p])}),2600)})();
 </script>
 </body>
 </html>

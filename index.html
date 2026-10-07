@@ -299,6 +299,24 @@ footer .credit{font-size:11px;color:#8a7c00;margin-top:12px}
 .cc{transition:transform .6s cubic-bezier(.2,.9,.3,1.1),bottom .6s,border-color .4s,opacity .5s;z-index:1}
 .cc.c-h{opacity:0;transform:scale(.8);z-index:0}
 .cc.c-f{bottom:6px;border-color:var(--yellow);z-index:3}
+/* ---------- desktop (não afeta mobile) ---------- */
+@media (min-width:1024px){
+  body{background:#0d0c0a}
+  .page{max-width:none;display:grid;grid-template-columns:minmax(420px,42%) 1fr;min-height:100vh;overflow:visible}
+  .hero{position:sticky;top:0;height:100vh;align-self:start}
+  .hero video{object-position:50% 30%}
+  .cap{padding:0 48px 56px;max-width:620px}
+  .cap h1{font-size:64px}
+  .top{padding:28px 36px}
+  .panel{margin-top:0;border-radius:0;padding:48px 40px 24px;display:flex;flex-direction:column;align-items:center}
+  .panel>*{width:100%;max-width:600px}
+  .card{min-height:270px}
+  .card.wide{min-height:230px}
+  .panel>.grab{display:none}
+  .bs{left:calc(max(420px,42%) + (100% - max(420px,42%))/2);bottom:auto;top:50%;transform:translate(-50%,-46%) scale(.96);opacity:0;pointer-events:none;border-radius:28px;max-height:86vh;transition:transform .3s,opacity .25s}
+  .bs.on{transform:translate(-50%,-50%);opacity:1;pointer-events:auto}
+  .bs .grab{display:none}
+}
 </style>
 </head>
 <body>

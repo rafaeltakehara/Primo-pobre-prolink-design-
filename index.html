@@ -285,6 +285,18 @@ footer .credit{font-size:11px;color:#8a7c00;margin-top:12px}
 .c-plan h3{max-width:none;white-space:nowrap}
 .cap h1,.talk2 b,.card h3,.c-livro .note,.t2-where{text-wrap:balance}
 .c-cup,.c-plan{background:#111;color:#fff}
+/* cupons: mini-cards colecionáveis */
+.ccs{position:absolute;left:0;right:0;bottom:-6px;height:150px}
+.cc{position:absolute;bottom:0;left:50%;width:96px;height:138px;margin-left:-48px;border-radius:16px;background:#1d1d1d;border:2px solid #333;padding:5px;box-shadow:0 14px 24px -8px rgba(0,0,0,.7);display:flex;flex-direction:column}
+.cc .art{position:relative;flex:none;height:92px;border-radius:11px;background:radial-gradient(90% 70% at 50% 40%,rgba(255,255,255,.35),transparent 70%),var(--art);display:grid;place-items:center}
+.cc .art img{width:40px;height:40px;border-radius:11px;object-fit:cover;background:#fff;box-shadow:0 6px 14px rgba(0,0,0,.3)}
+.cc .art img.dk2{background:#111;padding:5px;object-fit:contain}
+.cc .tab{position:absolute;top:5px;left:50%;transform:translateX(-50%);z-index:2;background:#1d1d1d;color:#fff;font-style:normal;font-size:8px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:2px 9px 4px;border-radius:0 0 9px 9px;white-space:nowrap}
+.cc .val{position:absolute;top:80px;left:50%;transform:translateX(-50%);z-index:2;background:#1d1d1d;color:var(--yellow);font-family:var(--cond);font-style:italic;font-weight:900;font-size:16px;line-height:1;padding:5px 10px 3px;border-radius:9px 9px 0 0;white-space:nowrap}
+.cc .nm{display:block;text-align:center;margin-top:12px;color:#fff;font-size:11px;font-weight:700;opacity:.8}
+.cc.c-l{transform:translateX(-46px) rotate(-12deg);bottom:-4px}
+.cc.c-r{transform:translateX(46px) rotate(12deg);bottom:-4px}
+.cc.c-f{bottom:6px;border-color:var(--yellow)}
 </style>
 </head>
 <body>
@@ -313,9 +325,11 @@ footer .credit{font-size:11px;color:#8a7c00;margin-top:12px}
         <h3>Cupons</h3>
         <span class="pill"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         <div class="obj">
-          <div class="tk t1"><img src="logos/sofisa.png" alt=""><span class="tt"><b>Sofisa · bônus</b><strong>R$ 50</strong></span></div>
-          <div class="tk t2"><img src="logos/ledger.png" alt=""><span class="tt"><b>Ledger · em BTC</b><strong>US$ 20</strong></span></div>
-          <div class="tk t3"><img src="logos/binance.png" alt="" class="dk2"><span class="tt"><b>Binance · taxas</b><strong>10% OFF</strong></span></div>
+          <div class="ccs">
+            <div class="cc c-l" style="--art:#2b2b2b"><i class="tab">Taxas</i><span class="art"><img src="logos/binance.png" alt="" class="dk2"></span><strong class="val">10% OFF</strong><span class="nm">Binance</span></div>
+            <div class="cc c-r" style="--art:#f1efe6"><i class="tab">Em BTC</i><span class="art"><img src="logos/ledger.png" alt=""></span><strong class="val">US$ 20</strong><span class="nm">Ledger</span></div>
+            <div class="cc c-f" style="--art:var(--yellow)"><i class="tab">Bônus</i><span class="art"><img src="logos/sofisa.png" alt=""></span><strong class="val">R$ 50</strong><span class="nm">Sofisa</span></div>
+          </div>
         </div>
       </button>
 
